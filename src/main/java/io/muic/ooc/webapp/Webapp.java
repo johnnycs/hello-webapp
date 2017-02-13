@@ -10,6 +10,7 @@ import java.io.Writer;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
+import servlet.HelloServlet;
 
 /**
  * Created by gigadot on 02-Feb-17.
@@ -20,7 +21,7 @@ public class Webapp {
 
         String docBase = "src/main/webapp/";
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8082);
+        tomcat.setPort(8006);
 
         Context ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
 
@@ -48,8 +49,14 @@ public class Webapp {
             }
         });
 
+        Tomcat.addServlet(ctx, "Hellno", new HelloServlet());
+
         ctx.addServletMapping("/hellox", "Hello");
+
+        ctx.addServletMapping("/hellno", "Hellno");
+
         ctx.addServletMapping("/", "Embedded");
+
 
         tomcat.addWebapp("/webapp", new File(docBase).getAbsolutePath());
         tomcat.start();
