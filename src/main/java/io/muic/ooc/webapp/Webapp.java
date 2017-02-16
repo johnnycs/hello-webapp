@@ -1,5 +1,6 @@
 package io.muic.ooc.webapp;
 
+import io.muic.ooc.webapp.service.DatabaseService;
 import io.muic.ooc.webapp.service.SecurityService;
 import java.io.File;
 import javax.servlet.ServletException;
@@ -17,10 +18,13 @@ public class Webapp {
         String docBase = "src/main/webapp/";
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8082);
+        // Databaseservice
+//        DatabaseService databaseService = new DatabaseService();
         SecurityService securityService = new SecurityService();
 
         ServletRouter servletRouter = new ServletRouter();
         servletRouter.setSecurityService(securityService);
+//        servletRouter.setDatbaseService(databaseService);
 
         Context ctx;
         try {
