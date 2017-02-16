@@ -87,9 +87,5 @@ public class DatabaseService {
         return temp;
     }
 
-//    public static void main(String[] args) {
-//        DatabaseService db = new DatabaseService();
-//        db.deleteDB("33");
-//        System.out.println(db.readData());
-//    }
+
 }
