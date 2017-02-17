@@ -60,7 +60,7 @@ public class ServletRouter {
     }
 
     private void initAddUser(Context ctx) {
-        System.out.println("user");
+//        System.out.println("user");
         UserAddServlet userAddServlet = new UserAddServlet();
         userAddServlet.setSecurityService(securityService);
 //        userAddServlet.setDatabaseService(databaseService);
@@ -71,7 +71,7 @@ public class ServletRouter {
     }
 
     private void initEditUser(Context ctx) {
-        System.out.println("edit");
+//        System.out.println("edit");
         UserEditServlet userEditServlet = new UserEditServlet();
         userEditServlet.setSecurityService(securityService);
         Tomcat.addServlet(ctx, "UserEditServlet", userEditServlet);
@@ -79,7 +79,7 @@ public class ServletRouter {
     }
 
     private void initDeleteUser(Context ctx) {
-        System.out.println("del");
+//        System.out.println("del");
         UserDeleteServlet userDeleteServlet = new UserDeleteServlet();
         userDeleteServlet.setSecurityService(securityService);
         Tomcat.addServlet(ctx, "UserDeleteServlet", userDeleteServlet);

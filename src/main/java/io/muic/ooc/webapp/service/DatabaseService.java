@@ -9,6 +9,8 @@ import java.util.Map;
  */
 public class DatabaseService {
 
+    SecurityService securityService;
+
     Connection conn;
     private final String SQL_URL = "jdbc:mysql://localhost:3306/ooc_test";
 //    private final String SQL_USERNAME = "";

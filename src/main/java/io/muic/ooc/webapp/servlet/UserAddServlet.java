@@ -55,7 +55,7 @@ public class UserAddServlet extends HttpServlet {
 
                 if (securityService.allowAdd(username)) {
                     PrintWriter out = response.getWriter();
-                    new DatabaseService().insertDB(username,password,firstname);
+                    new DatabaseService().insertDB(username,securityService.hashPassword(password),firstname);
                     RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/home.jsp");
                     rd.include(request, response);
                     out.print("<p style=\"color:green\">Add User Successful</p>");
