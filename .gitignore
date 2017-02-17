@@ -1,4 +1,5 @@
 /*.iml
 /target
 /.idea
+.DS_Store
 /tomcat.8082
