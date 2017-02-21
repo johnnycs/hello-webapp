@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.ja.security.PasswordHash;
 
-/**
- *
- * @author gigadot
- */
+
 public class SecurityService {
     
 //    private Map<String, String> userCredentials = new HashMap<String, String>() {{
@@ -38,7 +35,7 @@ public class SecurityService {
 
         try {
             String passwordHash = new PasswordHash().createHash(password);
-            System.out.println(new PasswordHash().validatePassword("boww",passwordHash));
+//            System.out.println(new PasswordHash().validatePassword("boww",passwordHash));
             return passwordHash;
         } catch (Exception e) {
             return null;

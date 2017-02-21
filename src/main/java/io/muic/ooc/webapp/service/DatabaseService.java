@@ -18,7 +18,7 @@ public class DatabaseService {
     public DatabaseService() {
         try {
 //            Class.forName("com.mysql.jdbc.Driver");
-            this.conn = DriverManager.getConnection(SQL_URL, "root", "");
+            this.conn = DriverManager.getConnection(SQL_URL, "ooc", "1234");
         } catch (Exception e){
             e.printStackTrace();
         }

@@ -11,16 +11,14 @@ import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.tomcat.util.descriptor.web.ErrorPage;
 
-/**
- * Created by gigadot on 02-Feb-17.
- */
+
 public class Webapp {
 
     public static void main(String[] args) {
 
         String docBase = "src/main/webapp/";
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(80);
+        tomcat.setPort(8082);
         // Databaseservice
 //        DatabaseService databaseService = new DatabaseService();
         SecurityService securityService = new SecurityService();

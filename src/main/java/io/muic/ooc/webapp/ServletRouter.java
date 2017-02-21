@@ -11,10 +11,7 @@ import io.muic.ooc.webapp.service.SecurityService;
 import org.apache.catalina.Context;
 import org.apache.catalina.startup.Tomcat;
 
-/**
- *
- * @author gigadot
- */
+
 public class ServletRouter {
     
     private SecurityService securityService;
